@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8kI-rZ-vw4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jh6-My-5b8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Jh6-My-5b8">
                                 <rect key="frame" x="16" y="20" width="568" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="Rly-aP-h4u"/>
@@ -82,6 +82,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="373" y="-195"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="VFw-3a-e4X">
+            <objects>
+                <splitViewController id="8kI-rZ-vw4" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="masterViewController" id="HGH-GI-L80"/>
+                        <segue destination="cpZ-Rb-z9T" kind="relationship" relationship="detailViewController" id="qMD-UO-Ahy"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgt-SJ-1z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-342" y="217"/>
+        </scene>
+        <!--Emotion View Controller-->
+        <scene sceneID="uec-qc-mRj">
+            <objects>
+                <viewController id="cpZ-Rb-z9T" customClass="EmotionViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zb7-Rc-ngO"/>
+                        <viewControllerLayoutGuide type="bottom" id="YZo-gs-eny"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1f9-VK-qlc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="q5s-cd-rxt" customClass="FaceView" customModule="Psychologist" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8Mv-kt-rOQ" appends="YES" id="2ak-jE-rwQ"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q5s-cd-rxt" firstAttribute="top" secondItem="1f9-VK-qlc" secondAttribute="top" id="3kM-NE-KXH"/>
+                            <constraint firstItem="q5s-cd-rxt" firstAttribute="bottom" secondItem="YZo-gs-eny" secondAttribute="top" id="HIv-m5-fUb"/>
+                            <constraint firstItem="q5s-cd-rxt" firstAttribute="leading" secondItem="1f9-VK-qlc" secondAttribute="leading" id="L4H-7z-31b"/>
+                            <constraint firstAttribute="trailing" secondItem="q5s-cd-rxt" secondAttribute="trailing" id="oEw-Bz-bpL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceView" destination="q5s-cd-rxt" id="veP-am-14W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49Q-6L-0hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8Mv-kt-rOQ">
+                    <connections>
+                        <action selector="changeHappiness:" destination="cpZ-Rb-z9T" id="fnQ-NX-pci"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="373" y="565"/>
         </scene>
     </scenes>
 </document>
