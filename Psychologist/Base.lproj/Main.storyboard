@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Psychologist View Controller-->
@@ -15,7 +16,68 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jh6-My-5b8">
+                                <rect key="frame" x="16" y="20" width="568" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Rly-aP-h4u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrL-qU-F1J">
+                                <rect key="frame" x="247" y="283" width="106" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Dancing Tree">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyW-ot-3ul">
+                                <rect key="frame" x="249" y="241" width="101" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jaf-ux-nkX"/>
+                                    <constraint firstAttribute="width" constant="118" id="ngB-kb-iBx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Golden Bear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jaf-ux-nkX"/>
+                                        <exclude reference="ngB-kb-iBx"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx5-ad-xjF">
+                                <rect key="frame" x="265" y="325" width="70" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Buckeye">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rx5-ad-xjF" firstAttribute="top" secondItem="SrL-qU-F1J" secondAttribute="bottom" constant="8" symbolic="YES" id="2Fd-db-8Vz"/>
+                            <constraint firstItem="SrL-qU-F1J" firstAttribute="top" secondItem="DyW-ot-3ul" secondAttribute="bottom" constant="8" symbolic="YES" id="IQG-pA-zFf"/>
+                            <constraint firstItem="Jh6-My-5b8" firstAttribute="centerX" secondItem="rx5-ad-xjF" secondAttribute="centerX" id="MSf-5Z-00A"/>
+                            <constraint firstItem="DyW-ot-3ul" firstAttribute="centerX" secondItem="SrL-qU-F1J" secondAttribute="centerX" id="VKk-nr-ms1"/>
+                            <constraint firstItem="Jh6-My-5b8" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="VqP-Yc-R4O"/>
+                            <constraint firstItem="Jh6-My-5b8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="a4Q-9t-ZW4"/>
+                            <constraint firstItem="SrL-qU-F1J" firstAttribute="centerX" secondItem="Jh6-My-5b8" secondAttribute="centerX" id="aXK-fg-ZvY"/>
+                            <constraint firstItem="Jh6-My-5b8" firstAttribute="centerX" secondItem="SrL-qU-F1J" secondAttribute="centerX" id="fFK-Ik-JyG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Jh6-My-5b8" secondAttribute="bottom" constant="530" id="fVx-lG-hDO"/>
+                            <constraint firstItem="SrL-qU-F1J" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="hML-hk-Rik"/>
+                            <constraint firstItem="Jh6-My-5b8" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="iea-gW-F8y"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aXK-fg-ZvY"/>
+                                <exclude reference="fVx-lG-hDO"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
