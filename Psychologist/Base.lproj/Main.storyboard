@@ -66,6 +66,26 @@
                                     <segue destination="VKg-1L-ClU" kind="showDetail" identifier="meh" id="dZH-6z-a0b"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5W-2R-olS">
+                                <rect key="frame" x="266" y="367" width="69" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="DUr-Fz-tFc"/>
+                                    <constraint firstAttribute="width" constant="93" id="OWc-jC-g3N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Nothing!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DUr-Fz-tFc"/>
+                                        <exclude reference="OWc-jC-g3N"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="nothing:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KvG-sy-onM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -80,6 +100,8 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Jh6-My-5b8" secondAttribute="bottom" constant="530" id="fVx-lG-hDO"/>
                             <constraint firstItem="SrL-qU-F1J" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="hML-hk-Rik"/>
                             <constraint firstItem="Jh6-My-5b8" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="iea-gW-F8y"/>
+                            <constraint firstItem="m5W-2R-olS" firstAttribute="centerX" secondItem="rx5-ad-xjF" secondAttribute="centerX" id="tlI-jr-Gnn"/>
+                            <constraint firstItem="m5W-2R-olS" firstAttribute="top" secondItem="rx5-ad-xjF" secondAttribute="bottom" constant="8" symbolic="YES" id="y0Y-U7-DfZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -89,10 +111,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Pyschologist" id="gnY-bj-432"/>
+                    <connections>
+                        <segue destination="VKg-1L-ClU" kind="showDetail" identifier="nothing" id="Hm6-Zo-NyC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185" y="-195"/>
+            <point key="canvasLocation" x="1056" y="-195"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="VFw-3a-e4X">
@@ -153,7 +178,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1185" y="557"/>
+            <point key="canvasLocation" x="1056" y="557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lOG-5V-jhu">
@@ -193,6 +218,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dZH-6z-a0b"/>
+        <segue reference="Hm6-Zo-NyC"/>
     </inferredMetricsTieBreakers>
 </document>
