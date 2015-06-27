@@ -155,6 +155,9 @@
                             <constraint firstItem="mbt-2f-GgG" firstAttribute="leading" secondItem="cyY-Yv-N7M" secondAttribute="leading" id="oEb-ZJ-GVb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="mbt-2f-GgG" id="a9s-gS-E7u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEQ-qs-hM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="-342" y="217"/>
         </scene>
-        <!--Emotion View Controller-->
+        <!--Diagnosed Emotion View Controller-->
         <scene sceneID="uec-qc-mRj">
             <objects>
-                <viewController id="cpZ-Rb-z9T" customClass="EmotionViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cpZ-Rb-z9T" customClass="DiagnosedEmotionViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zb7-Rc-ngO"/>
                         <viewControllerLayoutGuide type="bottom" id="YZo-gs-eny"/>
