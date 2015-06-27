@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Psychologist View Controller-->
+        <!--Pyschologist-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="PsychologistViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cpZ-Rb-z9T" kind="showDetail" identifier="happy" id="MmJ-mR-fTB"/>
+                                    <segue destination="VKg-1L-ClU" kind="showDetail" identifier="happy" id="MmJ-mR-fTB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyW-ot-3ul">
@@ -53,7 +53,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="cpZ-Rb-z9T" kind="showDetail" identifier="sad" id="A76-QF-jMI"/>
+                                    <segue destination="VKg-1L-ClU" kind="showDetail" identifier="sad" id="A76-QF-jMI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx5-ad-xjF">
@@ -63,7 +63,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cpZ-Rb-z9T" kind="showDetail" identifier="meh" id="dZH-6z-a0b"/>
+                                    <segue destination="VKg-1L-ClU" kind="showDetail" identifier="meh" id="dZH-6z-a0b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +88,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="gnY-bj-432"/>
+                    <navigationItem key="navigationItem" title="Pyschologist" id="gnY-bj-432"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,7 +100,7 @@
                 <splitViewController id="8kI-rZ-vw4" sceneMemberID="viewController">
                     <connections>
                         <segue destination="HWR-U2-4Md" kind="relationship" relationship="masterViewController" id="HGH-GI-L80"/>
-                        <segue destination="cpZ-Rb-z9T" kind="relationship" relationship="detailViewController" id="qMD-UO-Ahy"/>
+                        <segue destination="VKg-1L-ClU" kind="relationship" relationship="detailViewController" id="qMD-UO-Ahy"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgt-SJ-1z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,6 +141,7 @@
                             <constraint firstAttribute="trailing" secondItem="q5s-cd-rxt" secondAttribute="trailing" id="oEw-Bz-bpL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iRB-0S-6y4"/>
                     <connections>
                         <outlet property="faceView" destination="q5s-cd-rxt" id="veP-am-14W"/>
                     </connections>
@@ -152,7 +153,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="373" y="557"/>
+            <point key="canvasLocation" x="1185" y="557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lOG-5V-jhu">
@@ -172,8 +173,26 @@
             </objects>
             <point key="canvasLocation" x="373" y="-195"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="di6-P7-bf5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VKg-1L-ClU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rpk-fv-II8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cpZ-Rb-z9T" kind="relationship" relationship="rootViewController" id="gAt-KC-6Uk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTT-5e-5aW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="557"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="A76-QF-jMI"/>
+        <segue reference="dZH-6z-a0b"/>
     </inferredMetricsTieBreakers>
 </document>
